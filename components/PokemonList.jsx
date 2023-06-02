@@ -71,7 +71,7 @@ function PokemonListItem({ pokemon, cardView }) {
 export default function PokemonList({ pokemons, cardView }) {
   return (
     <ul
-      className={`grow card-list grid gap-5 grid-cols-4 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2 md:gap-10 ${
+      className={`grow card-list grid gap-5 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2 md:gap-10 ${
         !!cardView ? "horizontal" : ""
       }`}
     >
