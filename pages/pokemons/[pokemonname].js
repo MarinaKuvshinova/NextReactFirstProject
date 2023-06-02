@@ -14,10 +14,12 @@ export default function PokemonPage({ details }) {
       <Head>
         <title>Poremons: {details.data.name}</title>
       </Head>
-      <div className="bg-gradient-111 dark:bg-gradient-112 text-darkGrey dark:text-lightGrey font-mono min-h-screen py-10 flex">
-        <div className="container px-10 lg mx-auto self-center">
+      <div className="bg-gradient-111 dark:bg-gradient-112 text-darkGrey dark:text-lightGrey font-mono min-h-screen py-10 flex flex-col">
+        <div className="container px-10 mx-auto mb-9">
           <Heading />
-          <div className="grid gap-x-20 gap-y-10 grid-cols-2 mx-auto md:w-2/4">
+        </div>
+        <div className="container px-10 lg mx-auto md:self-center">
+          <div className="grid gap-x-20 gap-y-10 md:grid-cols-2 mx-auto max-w-5xl">
             <div className="col-span-full">
               <button
                 className="text-xl flex gap-2 text-darkGrey dark:text-lightGreen border-darkGrey dark:border-lightGreen rounded-xl border-2 px-3 py-1 box-shadow shadow-custom transition duration-500 ease-out hover:shadow-darkGrey dark:hover:shadow-lightGreen"
@@ -50,7 +52,9 @@ export default function PokemonPage({ details }) {
               ></Image>
             </div>
             <div className="self-center">
-              <h1 className="mb-10 text-6xl">{details.data.name}</h1>
+              <h1 className="mb-10 text-5xl sm:text-6xl break-words">
+                {details.data.name}
+              </h1>
               <dl className="grid gap-3 grid-cols-info">
                 <dt className="self-center">generation: </dt>
                 <dd className="text-lg">{details.data.generation}</dd>
