@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.normal {
+  background: gray;
+}
+
+.bug {
+  background: black;
+}
+.water {
+  background: blue;
+}
+
+.fire {
+  background: red;
+}
+
+.grass {
+  background: blueviolet;
+}
+
+.card-list li {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.card-list li:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.selected {
+  @apply bg-darkGrey text-lightGrey border-lightGreen border-4;
+}
+
+.disabled {
+  @apply opacity-40 pointer-events-none;
+}
+
+.pagination path {
+  fill: currentColor;
+}
+
+.horizontal {
+  grid-template-columns: 1fr !important;
+}
+
+.hide {
+  overflow: hidden !important;
+  width: 0 !important;
+  height: 0;
+  border: 0;
+  padding: 0;
+  margin: 0 !important;
+}
+
+.hide > * {
+  opacity: 0;
+}
